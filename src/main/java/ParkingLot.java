@@ -17,7 +17,7 @@ public class ParkingLot {
         return parkedCars.size()<capacity;
     }
 
-    public ParkingTicket park(Car car) throws ParkingLotIsFullException {
+    public ParkingTicket receive(Car car) throws ParkingLotIsFullException {
         if(hasSpace()){
             ParkingTicket ticket = new ParkingTicket();
             parkedCars.put(ticket, car);
